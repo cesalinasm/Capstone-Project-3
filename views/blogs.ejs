@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<div class="all-comments">
+  <% if (locals.blogs) { %>
+    <% blogs.forEach(blog_element => { %>
+      <a class="edit" href="/edit/<%= blog_element.id %>"><button>Edit</button></a>
+      <a class="delete" href="/delete/<%= blog_element.id %>"><button> Delete</button></a>
+      <h2>ID: <span style="color: azure"><%= blog_element.id %></span><br>
+          Author: <span style="color:azure"><%= blog_element.author %></span><br>
+          Title: <span style="color:azure"><%= blog_element.title %></span><br>
+          Comment: <span style="color:azure"><%= blog_element.content %></span>
+      </h2>
+    <% }); %>
+  <% } %>
+  <div class="return-button-div"><a href="/"><button class="return-button" type="button">Post a Blog</button></a></div>
+
+</div>    

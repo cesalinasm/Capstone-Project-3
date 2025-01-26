@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<h1>What do you think about Indrive?</h1>
+
+<div class="name_and_title" style="margin: 20px">
+  <form action="/blogs" method="POST">
+    <input name="author" type="text" placeholder="Name">
+    <input name="title" type="text" class="feedback-input" placeholder="Title" />
+    <div class="comment_box" style="margin-top: 10px">
+      <textarea name="text" class="feedback-textarea" placeholder="Comment"></textarea>
+    </div>
+    <input type="submit" class="submit-button" value="SUBMIT" />
+  </form>
+</div>
+
+<a href="/blogs"><button class="read-blogs-button" type="button">Read Blogs</button></a>
+ 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Blog</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <% if (locals.blog) { %>
+        <form id="editBlogForm" method="post" action="/edit/<%= blog.id %>" >
+            <label for="author">Author</label><br>
+            <input type="text" name="author" value="<%= blog.author %>"><br><br>
+            <label for="title">Title</label><br>
+            <input type="text" name="title" size="47" value="<%= blog.title %>"><br><br>
+            <label for="comment">Comment</label><br>
+            <textarea name="content" rows="10"><%= blog.content %></textarea><br><br>
+            <button class="edit-blog-button" type="submit">Edit Blog</button>
+        </form>
+    <% } %>
+</body>
+
